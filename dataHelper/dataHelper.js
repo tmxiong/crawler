@@ -18,6 +18,7 @@ var eventproxy = require('eventproxy'); //控制并发
 var superagent = require('superagent'); //发送请求
 var cheerio = require('cheerio'); //获取html内容
 var Eventproxy = require('eventproxy');
+var asyc = require('async');
 
 var count = 0;
 module.exports = {
@@ -45,8 +46,8 @@ module.exports = {
         var links = $(tabPanel).find('.author-link');
         var link = links.eq(count).attr('href');
         //console.log(link);
+        //asyc.mapLimit()
         this.getHtml(BASE_URL + link, ($)=>this.getData($));
-
     },
 
     // step 3 : 获取个人主页中的资料
@@ -82,9 +83,15 @@ module.exports = {
 
     //step 5 : 获取个人主页中'关注者' 中的第一位关注者的链接
     getUserLink($) {
-        var links = $('.UserLink-link');
-        console.log(links.length);
-        //var link = links.eq(0).attr('href');
+        var index = 0;
+        var links = $('.List-item').find('.UserLink-link');
+        var links_new = [];
+        for(var i = 0; i < links.length; i++){
+            links_new.push(links.eq(i).attr('href'))
+        }
+        console.log(links_new);
+        //async.mapLimit(links_new, 3, ())
+        //var link = links.eq(index).attr('href');
         // step 6: 回到第一步;
         //this.getHtml(BASE_URL + link, ($)=>this.getData($));
     },
