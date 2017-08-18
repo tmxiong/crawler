@@ -21,7 +21,7 @@ var async = require('async');
 var BASE_URL = 'https://www.zhihu.com';
 var EXPLORE_URL = BASE_URL + '/explore#monthly-hot';
 
-dataHelper.getHtml(EXPLORE_URL,(link)=>dataHelper.getMonthlyLink(link));
+dataHelper.getHtmlByUrl(EXPLORE_URL,(link)=>dataHelper.getMonthlyLink(link));
 
 // 并发连接数的计数器
 // var concurrencyCount = 0;
