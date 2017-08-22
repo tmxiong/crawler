@@ -15,17 +15,26 @@
 *  职业/教育
 *  $(".ProfileHeader-info").eq(i)
 * */
+var page = 0;
 
-var dataHelper = require('./dataHelper/dataHelper');
+
+var dataHelper = require('./helper/dataHelper');
+var dbHelper = require('./helper/dbHelper');
 var async = require('async');
 var BASE_URL = 'https://www.zhihu.com';
-var EXPLORE_URL = BASE_URL + '/explore#monthly-hot';
+var EXPLORE_URL = BASE_URL + '/node/ExploreAnswerListV2?params={"offset":'+ page +',"type":"month"}';
+var params = {offset:page,type:'month'};
+var jsonData = {"age":17};
 
-//dataHelper.getHtmlByUrl(EXPLORE_URL,(link)=>dataHelper.getMonthlyLink(link));
+dataHelper.getHtmlByUrl(getUrl(),(data)=>dataHelper.getPersonLink(data));
 
-dataHelper.getLoginCookie();
-
-
+function getUrl() {
+    return EXPLORE_URL;
+}
+// dbHelper.insertOne("people",jsonData,(err,res)=>{
+//     if (err) return console.log(err);
+//     console.log(res.ops);
+// });
 
 
 // 并发连接数的计数器
