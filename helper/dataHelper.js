@@ -1,19 +1,33 @@
-/* 头像: $(".Avatar--large").src
- *  性别: 男: $(".Icon--male"); 女: $(".Icon--female")
- *  昵称: $('.ProfileHeader-title').eq(0).text()
- *  签名: $('.ProfileHeader-title').eq(1).text()
- *  关注人数: $(".NumberBoard-value").eq(1).text()
- *  主页:
+/*
  *
- *  --- 选填 ----
- *  职业/教育
- *  $(".ProfileHeader-info").eq(i)
+ * answer_count:87
+ articles_count:2
+ avatar_url:"https://pic2.zhimg.com/v2-e1fc98e0a36c88d81c4dbec95a3ff989_is.jpg"
+ avatar_url_template: "https://pic2.zhimg.com/v2-e1fc98e0a36c88d81c4dbec95a3ff989_{size}.jpg"
+ badge : []
+ follower_count : 175
+ gender : 1
+ headline : "规矩太多，往往会让人忘了真正想做的事"
+ id : "02a9c4e851ebcfdd124d579c0c24b678"
+ is_advertiser : false
+ is_followed : false
+ is_following : false
+ is_org : false
+ name : "风间残照"
+ type : "people"
+ url : "http://www.zhihu.com/api/v4/people/02a9c4e851ebcfdd124d579c0c24b678"
+ url_token : "shu-ying-po-suo-49"
+ user_type : "people"
+ *
+ *
  * */
 
 
 /* 获取所有关注者
- * https://www.zhihu.com/api/v4/members/xxoo123-72/followers?include=data%5B*%5D.answer_count%2Carticles_count%2Cgender%2Cfollower_count%2Cis_followed%2Cis_following%2Cbadge%5B%3F(type%3Dbest_answerer)%5D.topics&offset=40&limit=20
+ * https://www.zhihu.com/api/v4/members/xxoo123-72/followers
  * */
+
+var dbHelper = require('./dbHelper');
 
 var offsetNum = 20; // 20为第一页, 40为第二页......
 var limitNum = 20; // 默认每页20条数据;
@@ -21,7 +35,7 @@ var page = 0; // 页数
 
 var PEOPLE_URL = '';
 var BASE_URL = 'https://www.zhihu.com';
-var EXPLORE_URL = BASE_URL + '/node/ExploreAnswerListV2?params={offset:' + page + ',type:month}';
+var EXPLORE_URL = BASE_URL + '/node/ExploreAnswerListV2?params={"offset":' + page + ',"type":"month"}';
 var LOGIN_URL = BASE_URL + '/login/email';
 var CAPTCHA_URL = BASE_URL + '/captcha.gif?r=1503281572879&type=login&lang=cn';
 
@@ -33,13 +47,13 @@ var headers_base = {
     //'Content-Length': '95',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     //'Cookie':null,
-    'Host': 'www.zhihu.com',
+    //'Host': 'www.zhihu.com',
     //'Origin': 'https://www.zhihu.com',
     //'Referer': 'https://www.zhihu.com/',
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     //'X-Requested-With': 'XMLHttpRequest',
     //'X-Xsrftoken': null
-    "authorization":'Bearer Mi4xVzBTOUFBQUFBQUFBSUlMUENQUkFEQmNBQUFCaEFsVk5tRHpDV1FBWGhpRjNkME1JbTNFV2dvang5Q1RucHZ5Njl3|1503309720|429ec65864fb0946f465ab251e75c7b0ab94ed81'
+    "authorization": 'Bearer Mi4xVzBTOUFBQUFBQUFBSUlMUENQUkFEQmNBQUFCaEFsVk5tRHpDV1FBWGhpRjNkME1JbTNFV2dvang5Q1RucHZ5Njl3|1503309720|429ec65864fb0946f465ab251e75c7b0ab94ed81'
 };
 
 var login_msg = {
@@ -63,61 +77,99 @@ var querystring = require('querystring');
 
 
 var count = 0;
+
+
+
+var user_info = {
+    // 头像
+    url:'',
+    // 昵称
+    name: '',
+    // 性别
+    gender: '',
+    // 签名
+    headline: '',
+    // 回答问题数量
+    answer_count: 0,
+    // 文章数量
+    articles_count: 0,
+    // 关注者数量
+    follower_count: 0,
+    // 教育/职业/...
+
+};
+
+
+
 module.exports = {
 
     ep() {
         return new Eventproxy();
     },
 
-    // step 1 : 根据EXPLORE_URL,获取html
-    getHtmlByUrl(url, callBack) {
+    // 通过url获取整个网页
+    getHtmlByUrl(url, callback) {
+
         superagent.get(url)
             .set(headers_base)
             .end((err, res)=> {
                 if (err) {
                     return console.log(err);
                 }
-                callBack(res);
+                callback(res);
             });
+
     },
 
-    // step 2: 获取'发现'-->'今本月最热'显示的第一条话题的第一条评论的链接;
-    // 初始状态显示10条话题
+    // 通过网页获取所要网址
+    // 每个话题中的第1个评论
+    // 一页有5个话题
     getPersonLink(data) {
-        var $ = cheerio.load(data.text);
-        var link = $('.author-link').attr('href');
-        this.getHtmlByUrl(BASE_URL + link, (data)=>this.getDataByHtml(data));
+        var $ = cheerio.load(data);
+        var link = $('body').find('.author-link');
+        var links = [];
+        for (var i = 0; i < link.length; i++) {
+            links[i] = link.eq(i).attr('href');
+        }
+        return links;
+        //this.getHtmlByUrl(BASE_URL + link, (data)=>this.getDataByHtml(data));
     },
+
 
     // step 3 : 根据请求的html获取个人主页中的资料
-    getDataByHtml(data) {
-        var $ = cheerio.load(data.text);
-        var homeLink = $('meta[itemprop=url]').attr('content');
-        var flowersLink = homeLink + '/flowers';
-        PEOPLE_URL = homeLink.split('/people')[1];
-        var sex = $(".Icon--male") == null ? '男' : '女';
-        var flowers = $(".NumberBoard-value").eq(1).text();
-        console.log('昵称:' + $('.ProfileHeader-title .ProfileHeader-name').text());
-        console.log('性别:' + sex);
-        console.log('签名:' + $('.ProfileHeader-title .ProfileHeader-headline').text());
-        console.log('头像:' + $(".Avatar--large").prop('src'));
+    getUserInfoByHtml(data) {
+        var $ = cheerio.load(data);
+
+        user_info.name = $('.ProfileHeader-name').text();
+        user_info.headline = $('.ProfileHeader-headline').text();
+
+        user_info.url = $('meta[itemprop = url]').attr('content');
+        user_info.gender  = $('meta[itemprop = gender]').attr('content');
+        user_info.image = $('meta[itemprop = "image"]').prop('content');
+        // 赞同
+        user_info.voteup_count = $('meta[itemprop = "zhihu:voteupCount"]').attr('content');
+        // 感谢
+        user_info.thanked_count = $('meta[itemprop = "zhihu:thankedCount"]').attr('content');
+        //
+        user_info.follower_count = $('meta[itemprop = "zhihu:followerCount"]').attr('content');
+        user_info.answer_count = $('meta[itemprop = "zhihu:answerCount"]').attr('content');
+        user_info.articles_count = $('meta[itemprop = "zhihu:articlesCount"]').attr('content');
+
+
 
         var infoItems = $(".ProfileHeader-infoItem");
         if (infoItems.length) {
             for (var i = 0; i < infoItems.length; i++) {
-                console.log(infoItems.eq(i).children().children().attr('class').split('--')[1] + ':' + infoItems.eq(i).text())
+                var key = infoItems.eq(i).children().children().attr('class').split('--')[1];
+                var val = infoItems.eq(i).text();
+
+                if (key == 'male' || key == 'female') continue;
+                user_info[key] = val;
             }
         }
+        //console.log(user_info);
+        return user_info;
 
-        console.log('关注人数:' + flowers);
-        console.log('主页:' + homeLink);
-
-        console.log('-----------------------------------------------------');
-        console.log('-----------------------------------------------------');
-
-
-        //step 4 : 获取个人主页中所有'关注者'
-        this.getDataByUrl();
 
     },
 
@@ -127,16 +179,14 @@ module.exports = {
     },
 
     //step 5 : 根据api获取个人主页中所有'关注者'
-    getDataByUrl() {
+    getDataByUrl(url,callback) {
         //  console.log(this.getApiUrl());
         // request(this.getApiUrl(),(err, res, body)=>{
         //     console.log(res.statusCode);
         //     console.log(body);
         // })
-        var apiUrl = this.getApiUrl();
-
         superagent
-            .get(apiUrl)
+            .get(url)
             .set(headers_base)
             .set('Cookies', cookie)
             .end((err, res)=> {
@@ -144,7 +194,12 @@ module.exports = {
                     return console.log(err);
                 }
 
-                console.log(res.body);
+                callback(res.body);
+                //console.log(res.body);
+                // dbHelper.insertOne("people", res.body, (err, res)=> {
+                //     if (err) return console.log(err);
+                //     console.log(res.ops);
+                // });
             })
     },
 
