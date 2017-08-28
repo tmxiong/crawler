@@ -79,10 +79,9 @@ var querystring = require('querystring');
 var count = 0;
 
 
-
 var user_info = {
     // 头像
-    url:'',
+    url: '',
     // 昵称
     name: '',
     // 性别
@@ -100,7 +99,6 @@ var user_info = {
 };
 
 
-
 module.exports = {
 
     ep() {
@@ -114,7 +112,11 @@ module.exports = {
             .set(headers_base)
             .end((err, res)=> {
                 if (err) {
-                    return console.log(err);
+                    if (err.status == 410) {
+                        res.text = null;
+                    } else {
+                        return console.log(err);
+                    }
                 }
                 callback(res);
             });
@@ -138,13 +140,14 @@ module.exports = {
 
     // step 3 : 根据请求的html获取个人主页中的资料
     getUserInfoByHtml(data) {
+        if(data == null) return '该用户失踪了!';
         var $ = cheerio.load(data);
-
+        user_info._id = $('.ProfileHeader-name').text();
         user_info.name = $('.ProfileHeader-name').text();
         user_info.headline = $('.ProfileHeader-headline').text();
 
         user_info.url = $('meta[itemprop = url]').attr('content');
-        user_info.gender  = $('meta[itemprop = gender]').attr('content');
+        user_info.gender = $('meta[itemprop = gender]').attr('content');
         user_info.image = $('meta[itemprop = "image"]').prop('content');
         // 赞同
         user_info.voteup_count = $('meta[itemprop = "zhihu:voteupCount"]').attr('content');
@@ -154,7 +157,6 @@ module.exports = {
         user_info.follower_count = $('meta[itemprop = "zhihu:followerCount"]').attr('content');
         user_info.answer_count = $('meta[itemprop = "zhihu:answerCount"]').attr('content');
         user_info.articles_count = $('meta[itemprop = "zhihu:articlesCount"]').attr('content');
-
 
 
         var infoItems = $(".ProfileHeader-infoItem");
@@ -169,8 +171,6 @@ module.exports = {
         }
         //console.log(user_info);
         return user_info;
-
-
     },
 
     getApiUrl() {
@@ -179,7 +179,7 @@ module.exports = {
     },
 
     //step 5 : 根据api获取个人主页中所有'关注者'
-    getDataByUrl(url,callback) {
+    getDataByUrl(url, callback) {
         //  console.log(this.getApiUrl());
         // request(this.getApiUrl(),(err, res, body)=>{
         //     console.log(res.statusCode);

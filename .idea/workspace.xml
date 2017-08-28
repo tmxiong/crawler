@@ -30,11 +30,41 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="132" column="23" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
+            <state relative-caret-position="-34">
+              <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbHelper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/dbHelper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collection.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/collection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="838" column="26" selection-start-line="838" selection-start-column="20" selection-end-line="838" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/mongodb/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-139">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,40 +72,21 @@
       <file leaf-file-name="dataHelper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper/dataHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-385">
-              <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+            <state relative-caret-position="-865">
+              <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#6441#6630#0" expanded="false" />
-                <element signature="e#6717#7619#0" expanded="false" />
-                <element signature="e#7643#7675#0" expanded="false" />
-                <element signature="e#7708#8226#0" expanded="false" />
+                <element signature="e#6677#6866#0" expanded="false" />
+                <element signature="e#6953#7855#0" expanded="false" />
+                <element signature="e#7879#7911#0" expanded="false" />
+                <element signature="e#7944#8462#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/request/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
           <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="0">
@@ -85,6 +96,15 @@
               <second_editor>
                 <js_state />
               </second_editor>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -173,6 +193,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mongodb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mongodb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,12 +355,13 @@
       <workItem from="1503363553758" duration="8927000" />
       <workItem from="1503388652519" duration="5996000" />
       <workItem from="1503536136774" duration="21847000" />
-      <workItem from="1503630198585" duration="17938000" />
+      <workItem from="1503630198585" duration="18050000" />
+      <workItem from="1503884104260" duration="16366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124569000" />
+    <option name="totallyTimeSpent" value="141047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -299,7 +374,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.71397614" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38678223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -327,44 +402,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/request/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -374,6 +412,15 @@
           <second_editor>
             <js_state />
           </second_editor>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -393,10 +440,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#6441#6630#0" expanded="false" />
-            <element signature="e#6717#7619#0" expanded="false" />
-            <element signature="e#7643#7675#0" expanded="false" />
-            <element signature="e#7708#8226#0" expanded="false" />
+            <element signature="e#6677#6866#0" expanded="false" />
+            <element signature="e#6953#7855#0" expanded="false" />
+            <element signature="e#7879#7911#0" expanded="false" />
+            <element signature="e#7944#8462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -448,10 +495,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#6441#6630#0" expanded="false" />
-            <element signature="e#6717#7619#0" expanded="false" />
-            <element signature="e#7643#7675#0" expanded="false" />
-            <element signature="e#7708#8226#0" expanded="false" />
+            <element signature="e#6677#6866#0" expanded="false" />
+            <element signature="e#6953#7855#0" expanded="false" />
+            <element signature="e#7879#7911#0" expanded="false" />
+            <element signature="e#7944#8462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -481,10 +528,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#6441#6630#0" expanded="false" />
-            <element signature="e#6717#7619#0" expanded="false" />
-            <element signature="e#7643#7675#0" expanded="false" />
-            <element signature="e#7708#8226#0" expanded="false" />
+            <element signature="e#6677#6866#0" expanded="false" />
+            <element signature="e#6953#7855#0" expanded="false" />
+            <element signature="e#7879#7911#0" expanded="false" />
+            <element signature="e#7944#8462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -541,10 +588,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#6441#6630#0" expanded="false" />
-            <element signature="e#6717#7619#0" expanded="false" />
-            <element signature="e#7643#7675#0" expanded="false" />
-            <element signature="e#7708#8226#0" expanded="false" />
+            <element signature="e#6677#6866#0" expanded="false" />
+            <element signature="e#6953#7855#0" expanded="false" />
+            <element signature="e#7879#7911#0" expanded="false" />
+            <element signature="e#7944#8462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -654,15 +701,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataHelper/c.txt" />
     <entry file="file://$PROJECT_DIR$/node_modules/request/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -674,6 +712,15 @@
           </second_editor>
         </state>
       </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="6422">
           <caret line="338" column="3" selection-start-line="338" selection-start-column="3" selection-end-line="338" selection-end-column="3" />
@@ -682,13 +729,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataHelper/cookie.txt" />
-    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -704,39 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1197">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="7353">
-          <caret line="387" column="31" selection-start-line="387" selection-start-column="31" selection-end-line="387" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/dbHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -745,24 +752,133 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/async/dist/async.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4760">
+          <caret line="1175" column="4" selection-start-line="1175" selection-start-column="4" selection-end-line="1175" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/README.md">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1503369370738" expanded="true" signature="8077:8170" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="8567:8968" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="8701:8736" ph="[...]" />
+              <marker date="1503369370738" expanded="true" signature="8760:8964" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="9607:9743" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="9718:9739" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="10200:10586" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="10417:10580" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11072:11254" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11183:11250" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11219:11244" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11418:11751" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11584:11747" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12150:12382" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12261:12378" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12297:12372" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12335:12364" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12667:12988" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12825:12984" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13464:13749" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13575:13745" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13611:13739" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13649:13731" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13688:13721" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1503369370738" expanded="true" signature="8077:8170" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="8567:8968" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="8701:8736" ph="[...]" />
+              <marker date="1503369370738" expanded="true" signature="8760:8964" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="9607:9743" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="9718:9739" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="10200:10586" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="10417:10580" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11072:11254" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11183:11250" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11219:11244" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11418:11751" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="11584:11747" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12150:12382" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12261:12378" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12297:12372" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12335:12364" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12667:12988" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="12825:12984" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13464:13749" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13575:13745" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13611:13739" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13649:13731" ph="{...}" />
+              <marker date="1503369370738" expanded="true" signature="13688:13721" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="7353">
+          <caret line="387" column="31" selection-start-line="387" selection-start-column="31" selection-end-line="387" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="838" column="26" selection-start-line="838" selection-start-column="20" selection-end-line="838" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helper/dataHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+        <state relative-caret-position="-865">
+          <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#6441#6630#0" expanded="false" />
-            <element signature="e#6717#7619#0" expanded="false" />
-            <element signature="e#7643#7675#0" expanded="false" />
-            <element signature="e#7708#8226#0" expanded="false" />
+            <element signature="e#6677#6866#0" expanded="false" />
+            <element signature="e#6953#7855#0" expanded="false" />
+            <element signature="e#7879#7911#0" expanded="false" />
+            <element signature="e#7944#8462#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/dbHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="132" column="23" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
+        <state relative-caret-position="-34">
+          <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
